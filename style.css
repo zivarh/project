@@ -1,0 +1,127 @@
+/* Background color to body class*/ 
+.body{
+    background-color: #b296c859;
+}
+/* Background color, font-family, font-style and border to blog-header class which indicates place where located logo and title of website*/ 
+.blog-header{
+    background-color: rgb(87, 58, 155);
+    font-family: Arial Rounded MT Bold;
+    font-style:inherit;
+    border-bottom: 0.5px solid white;
+}
+/* Website title font color*/ 
+.blog-header-logo{
+    color: rgb(233, 230, 230);
+}
+/* Size of website logo*/ 
+#icon{
+    width: 50px;
+    height: 50px;
+}
+/* Font family and size of links in navigation part */ 
+.nav-link{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 22px;
+}
+/* Navigation part background color and */ 
+.navbar{
+    background-color: rgb(87, 58, 155);
+    border-bottom: 1px solid white;
+}
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin-right:10px;
+  }
+.navbar a:hover{
+    color: #170041;
+  }
+
+
+.navbar-nav .active a:hover {
+    color: #170041;
+  }
+/*carousel image */  
+.d-block{
+    height: 500px;
+    width: 700px;
+    padding-top: 10px;
+}
+/*carousel indicator at info.html */  
+.carousel-indicators {
+    padding-bottom: 5px;
+  }
+ /*carousel indicator button */   
+  .carousel-indicators button {
+    display: inline-block;
+    width: 2rem;
+    height: 0.4rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 0;
+    background-color: #fff;
+    opacity: 0.5;
+    transition: opacity 0.1s ease-in-out;
+  }
+ /*carousel indicator button in active position */   
+  .carousel-indicators button.active {
+    color: 0;
+  }
+ 
+p{
+    text-align: justify;
+    font-family: Arial Rounded MT Bold;
+}
+footer{
+    background-color: rgb(87, 58, 155);
+}
+
+#copyright{
+    background-color: rgb(120, 98, 142);
+	color: rgb(230, 230, 230);
+	
+}
+/*links in footer */  
+.m-1{
+    color: rgb(124, 140, 187)
+}
+/*links in footer during hover */  
+.m-1:hover{
+    color: #350606;
+  }
+
+/*map sizes */  
+.gmap {
+  margin: 5px;
+  border: thin solid black;
+  height: 500px;
+}  
+
+h1, h4{
+  text-align: center;
+  padding-bottom: 10px;
+}
+/*h4 in index.html with .objective class */
+.objectives{
+  text-align: justify;
+  color: #411515;
+  font-size:larger
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: red !important;
+  border-color: red !important;
+}
+ /*infowindow information*/ 
+.infowindow p{
+align-content: center;
+
+  }
+ /*infowindow image*/ 
+.infowindow img {
+    width: 300px;
+    height: 200px;
+    margin-right: 5px;
+    padding-bottom: 20px;
+  }
+
+

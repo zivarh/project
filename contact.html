@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land of Fire</title>
+    <link rel="icon" href="assets/azerbaijan.png" type="image/icon type"> <!--icon of the title-->
+      <!--This is a link to the Leaflet stylesheet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <!--This is a link to the Leaflet JS library-->
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <!--This is a link to the JQuerry library-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--This is a link to the Bootstrap JS library-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="script.js"></script>  <!--JS reated with different functions-->
+	<script type="text/javascript" src="data.js"></script> <!--JS containing all data-->
+	<link rel="stylesheet" media="all" href="style.css" type="text/css"> <!--CSS created-->
+  <!--This is a link to the Bootstrap stylesheet-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+</head>
+<body class="body">
+  <div>
+    <header class="blog-header py-3"> <!--heading part of page with Bootstrap elements-->
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-12 text-center">
+              <!--Logo and website title-->
+                <h1 class="blog-header-logo"><img src="assets/fire.png" id="icon" alt="icon"> Azerbaijan - The Land of Fire</h1>
+            </div>
+        </div>
+    </header>
+    <!--Navigation part where we can navigate between other pages-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"> <!--Bootstrap elements and active class shows that we are on this page right now-->
+              <a class="nav-link" href="index.html"> Home Page<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="types.html">Types of entertainment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="info.html">Information about Azerbaijan</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0"> <!--Search line and button-->
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button> <!--All classes names are part of Bootstrap-->
+          </form>
+        </div>
+      </nav>
+</div>
+    <br>
+    <div class="container"> <!--container used to align content within a given device or viewport-->
+        <h1> Do you want to leave a review about one of the places in Azerbaijan that you visited or did not find on the web page? </h1>
+        <h4>We try to update our webpage regularly and provide more information about historical and touristic places. Leave a review and we'll let you know as soon as the update is done</h4>
+        <form>
+            <div class="form-row"> <!--Row for col used for grid system-->
+              <div class="form-group col-6"> <!--col-6 means it cover 50% of space  -->
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control"  placeholder="Name">
+              </div>
+              <div class="form-group col-6"> <!-- Surname part will cover other 50% of space  -->
+                <label for="inputSurname">Surname</label>
+                <input type="text" class="form-control"  placeholder="Surname">
+              </div>
+            </div>
+            <div class="form-row"> <!--Row for col used for grid system-->
+            <div class="form-group col-6"> <!--col-6 means it cover 50% of space  -->
+                <label for="inputEmail">Email</label>
+              <input type="email" class="form-control"  placeholder="Email">
+            </div>
+            <div class="form-group col-6">
+                <label for="inputAddress">Address</label> <!-- Address part will cover other 50% of space  -->
+              <input type="text" class="form-control"  placeholder="Address">
+            </div>
+            </div>
+            <div class="form-row"> 
+              <div class="form-group col-4"> <!--This part will cover 1/3 of space -->
+                <label for="inputCity">What city have you been or want to be in?</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="City Name">
+              </div>
+              <div class="form-group col-4"> 
+                <!--This part will cover 1/3 of space there used select and options. So user can select from given options -->
+                <label > Which one do you prefer?</label>
+                    <select class="custom-select" required>
+                      <option value="">Open this select menu</option>
+                      <option value="1">Museums</option>
+                      <option value="2">Parks</option>
+                      <option value="3">Towers</option>
+                      <option value="4">Historical cores</option>
+                      <option value="5">Palaces</option>
+                      <option value="6">Resorts</option>
+                      <option value="7">Other</option>
+                    </select>
+
+              </div>
+              <div class="form-group col-4"> <!--This part will cover 1/3 of space
+                and there used radios where user should select one from two round buttons names-->
+                <label > Are you from Azerbaijan or from another country?</label>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
+                    <label class="custom-control-label" for="customControlValidation2">I'm from Azerbaijan</label>
+                  </div>
+                  <div class="custom-control custom-radio mb-3">
+                    <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
+                    <label class="custom-control-label" for="customControlValidation3">I'm from another country</label>
+
+                  </div>
+              </div>
+            </div>
+            <div class="form-group"> <!--Big area where user can write comment-->
+                <label >Your comment</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            <div class="form-group">
+              <!-- This is a form group containing a single checkbox for agreeing to the terms and conditions -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <!-- This is the label text that appears next to the checkbox -->
+                  <label class="form-check-label" for="invalidCheck"> Agree to terms and conditions </label>
+                  <!-- This is the error message that appears if the user tries to submit the form without checking the checkbox -->
+                  <div class="invalid-feedback"> You must agree before submitting.</div>
+                </div>
+              </div>
+              <!-- This is the submit button for the form -->
+              <button class="btn btn-danger" type="submit">Submit form</button>
+          </form>
+    </div>
+
+    <br>
+   
+        <!-- This is a footer section of a web page. It contains social links to other pages and a copyright. -->
+        <footer class="text-center text-white">
+          <div class="container p-3 pb-0 ">
+              <!-- Here as well I used targent blank to open them on new tab automatically -->
+              <h5>Thank you for visiting our website!</h5>
+              <section class="mb-3">
+                  <div class="links">
+                      <a class="m-1" href="index.html" target="_blank">Home Page |</i></a>
+                      <a class="m-1" href="types.html" target="_blank">Types of Entertainment |</i></a>
+                      <a class="m-1"  href="info.html" target="_blank">Information about Azerbaijan |</a>
+                      <a class="m-1"  href="contact.html" target="_blank">Contact us</a>
+                  </div>
+              </section>             
+          </div>
+
+          <!-- The copyright is displayed at the bottom of the footer section p indicates padding, mr- margin right, ml- margin left.-->
+          <div class="text-center p-4 mr-0 ml-0" id="copyright">
+              © 2023 Copyright: Zivar Hagverdiyeva
+          </div>
+      </footer>
+</body>
+</html>
